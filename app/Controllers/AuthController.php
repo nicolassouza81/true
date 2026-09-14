@@ -31,7 +31,7 @@ final class AuthController
             'title' => 'Entrar',
             'error' => Session::getFlash('error'),
             'old'   => Session::getFlash('old', []),
-        ]);
+        ], 'auth');
     }
 
     public function login(Request $request): void
@@ -179,7 +179,7 @@ final class AuthController
             'title'   => 'Recuperar senha',
             'error'   => Session::getFlash('error'),
             'success' => Session::getFlash('success'),
-        ]);
+        ], 'auth');
     }
 
     public function forgotPassword(Request $request): void
@@ -240,7 +240,7 @@ final class AuthController
             'token' => $request->query('token', ''),
             'email' => $request->query('email', ''),
             'error' => Session::getFlash('error'),
-        ]);
+        ], 'auth');
     }
 
     public function resetPassword(Request $request): void
