@@ -10,7 +10,11 @@ RewriteEngine On
 # RewriteCond %{HTTPS} off
 # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Não redirecionar arquivos e diretórios existentes em /public
+# Se o arquivo existe em /public, serve diretamente
+RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -f
+RewriteRule ^(.*)$ public/$1 [L]
+
+# Não redirecionar arquivos e diretórios existentes
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 

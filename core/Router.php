@@ -81,7 +81,8 @@ final class Router
             }
         }
 
-        $routes = $this->routes[$method] ?? [];
+        $lookupMethod = ($method === 'HEAD') ? 'GET' : $method;
+        $routes = $this->routes[$lookupMethod] ?? [];
 
         foreach ($routes as $route) {
             if (!preg_match($route['regex'], $uri, $matches)) {

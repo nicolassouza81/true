@@ -10,8 +10,36 @@ declare(strict_types=1);
 // Suporte nativo ao servidor embutido do PHP (php -S localhost:8000 index.php)
 if (php_sapi_name() === 'cli-server') {
     $uri = parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH) ?? '';
-    if ($uri !== '/' && is_file(__DIR__ . $uri)) {
-        return false;
+    if ($uri !== '/') {
+        if (is_file(__DIR__ . $uri)) {
+            return false;
+        }
+        $publicFile = __DIR__ . '/public' . $uri;
+        if (is_file($publicFile)) {
+            $ext = strtolower(pathinfo($publicFile, PATHINFO_EXTENSION));
+            $mimes = [
+                'css'   => 'text/css; charset=UTF-8',
+                'js'    => 'application/javascript; charset=UTF-8',
+                'svg'   => 'image/svg+xml',
+                'png'   => 'image/png',
+                'jpg'   => 'image/jpeg',
+                'jpeg'  => 'image/jpeg',
+                'webp'  => 'image/webp',
+                'mp4'   => 'video/mp4',
+                'ico'   => 'image/x-icon',
+                'xml'   => 'application/xml',
+                'txt'   => 'text/plain; charset=UTF-8',
+                'json'  => 'application/json',
+                'woff2' => 'font/woff2',
+                'woff'  => 'font/woff',
+                'ttf'   => 'font/ttf',
+            ];
+            $contentType = $mimes[$ext] ?? (mime_content_type($publicFile) ?: 'application/octet-stream');
+            header('Content-Type: ' . $contentType);
+            header('Content-Length: ' . (string) filesize($publicFile));
+            readfile($publicFile);
+            exit;
+        }
     }
 }
 
