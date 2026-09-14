@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funil de vendas — True Eventos Admin</title>
+    <link rel="icon" href="/public/assets/brand/true-square-white-on-black.svg">
+    <link rel="stylesheet" href="/public/css/tokens.css">
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/base.css">
+    <link rel="stylesheet" href="/public/css/components.css">
+    <link rel="stylesheet" href="/public/css/utilities.css">
+</head>
+<body class="admin-layout" data-csrf="da99ced8313fd1606a0fcd50fbcf8769e9049560aeadc65f20a42899b24374df">
+
+    <aside class="sidebar">
+        <div class="sidebar__brand">
+            <a href="/admin">
+                <img src="/public/assets/brand/true-horizontal-black.svg" alt="True Eventos" height="32">
+            </a>
+        </div>
+
+        <nav class="sidebar__nav">
+            <a href="/admin" class="sidebar__link">📊 Dashboard</a>
+                            <a href="/admin/pipeline" class="sidebar__link">📋 Funil de Vendas (Kanban)</a>
+                <a href="/admin/pipeline/leads/create" class="sidebar__link">➕ Novo Orçamento / Lead</a>
+                <a href="/admin/pipeline/stages" class="sidebar__link">🏷️ Etapas do Funil</a>
+                        <a href="/admin/testimonials" class="sidebar__link">⭐ Depoimentos</a>
+            <a href="/admin/logos" class="sidebar__link">🤝 Parceiros / Clientes</a>
+            <a href="/admin/users" class="sidebar__link">👥 Usuários / Equipe</a>
+            <a href="/" target="_blank" class="sidebar__link" style="margin-top:auto;border-top:1px solid rgba(255,255,255,0.08);padding-top:1rem;">🌐 Ver Site Institucional</a>
+        </nav>
+
+        <div class="sidebar__footer">
+            <span class="sidebar__user">Administrador</span>
+            <form action="/logout" method="POST">
+                <input type="hidden" name="_csrf" value="da99ced8313fd1606a0fcd50fbcf8769e9049560aeadc65f20a42899b24374df">
+                <button type="submit" class="btn btn--ghost btn--sm">Sair</button>
+            </form>
+        </div>
+    </aside>
+
+    <div class="admin-body">
+        <header class="admin-header">
+            <h1 class="admin-header__title">Funil de vendas</h1>
+        </header>
+
+        <main class="admin-main">
+            
+            
+            <div class="admin-section">
+    <div class="admin-section__header">
+        <h2>Funil de vendas</h2>
+        <div class="u-inline-actions">
+            <a href="/admin/pipeline/stages" class="btn btn--ghost btn--sm">Gerenciar etapas</a>
+                            <a href="/admin/pipeline/leads/create" class="btn btn--primary btn--sm">+ Novo lead</a>
+                    </div>
+    </div>
+
+            <div class="kanban" id="kanbanBoard">
+                            <div class="kanban__column">
+                    <div class="kanban__column-header" style="border-top-color: #5b8def">
+                        <span class="kanban__column-title">Novo lead</span>
+                        <span class="kanban__column-count" data-count-for="1">2</span>
+                    </div>
+
+                    <div class="kanban__cards" data-stage-id="1">
+                                                    <div class="kanban__card" draggable="true" data-lead-id="1">
+                                <strong class="kanban__card-name">João Pereira</strong>
+                                                                    <span class="kanban__card-company">Comércio Silva</span>
+                                                                                                    <span class="kanban__card-meta">joao@comerciosilva.com.br</span>
+                                                                <a href="/admin/pipeline/leads/1/edit" class="kanban__card-link">Ver detalhes →</a>
+                            </div>
+                                                    <div class="kanban__card" draggable="true" data-lead-id="4">
+                                <strong class="kanban__card-name">nicolas</strong>
+                                                                    <span class="kanban__card-company">NKZ</span>
+                                                                                                    <span class="kanban__card-meta">newtonnicolas@gmail.com</span>
+                                                                <a href="/admin/pipeline/leads/4/edit" class="kanban__card-link">Ver detalhes →</a>
+                            </div>
+                                            </div>
+
+                    <a href="/admin/pipeline/leads/create?stage_id=1" class="kanban__add-card">+ Adicionar lead</a>
+                </div>
+                            <div class="kanban__column">
+                    <div class="kanban__column-header" style="border-top-color: #f0a500">
+                        <span class="kanban__column-title">Contato</span>
+                        <span class="kanban__column-count" data-count-for="2">1</span>
+                    </div>
+
+                    <div class="kanban__cards" data-stage-id="2">
+                                                    <div class="kanban__card" draggable="true" data-lead-id="2">
+                                <strong class="kanban__card-name">Ana Ribeiro</strong>
+                                                                    <span class="kanban__card-company">Ribeiro Contábil</span>
+                                                                                                    <span class="kanban__card-meta">ana@ribeirocontabil.com.br</span>
+                                                                <a href="/admin/pipeline/leads/2/edit" class="kanban__card-link">Ver detalhes →</a>
+                            </div>
+                                            </div>
+
+                    <a href="/admin/pipeline/leads/create?stage_id=2" class="kanban__add-card">+ Adicionar lead</a>
+                </div>
+                            <div class="kanban__column">
+                    <div class="kanban__column-header" style="border-top-color: #17a2b8">
+                        <span class="kanban__column-title">Proposta</span>
+                        <span class="kanban__column-count" data-count-for="3">1</span>
+                    </div>
+
+                    <div class="kanban__cards" data-stage-id="3">
+                                                    <div class="kanban__card" draggable="true" data-lead-id="3">
+                                <strong class="kanban__card-name">Carlos Souza</strong>
+                                                                    <span class="kanban__card-company">Souza Materiais</span>
+                                                                                                    <span class="kanban__card-meta">carlos@souzamateriais.com.br</span>
+                                                                <a href="/admin/pipeline/leads/3/edit" class="kanban__card-link">Ver detalhes →</a>
+                            </div>
+                                            </div>
+
+                    <a href="/admin/pipeline/leads/create?stage_id=3" class="kanban__add-card">+ Adicionar lead</a>
+                </div>
+                            <div class="kanban__column">
+                    <div class="kanban__column-header" style="border-top-color: #28a745">
+                        <span class="kanban__column-title">Ganho</span>
+                        <span class="kanban__column-count" data-count-for="4">0</span>
+                    </div>
+
+                    <div class="kanban__cards" data-stage-id="4">
+                                            </div>
+
+                    <a href="/admin/pipeline/leads/create?stage_id=4" class="kanban__add-card">+ Adicionar lead</a>
+                </div>
+                            <div class="kanban__column">
+                    <div class="kanban__column-header" style="border-top-color: #dc3545">
+                        <span class="kanban__column-title">Perdido</span>
+                        <span class="kanban__column-count" data-count-for="5">0</span>
+                    </div>
+
+                    <div class="kanban__cards" data-stage-id="5">
+                                            </div>
+
+                    <a href="/admin/pipeline/leads/create?stage_id=5" class="kanban__add-card">+ Adicionar lead</a>
+                </div>
+                    </div>
+    </div>
+        </main>
+    </div>
+
+    <script type="module" src="/public/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS subscriptions (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id INT UNSIGNED NOT NULL,
+    plan_id INT UNSIGNED NOT NULL,
+    stripe_customer_id VARCHAR(100) NULL,
+    stripe_subscription_id VARCHAR(100) NULL,
+    status ENUM('incomplete', 'trialing', 'active', 'past_due', 'canceled', 'unpaid') NOT NULL DEFAULT 'incomplete',
+    current_period_start DATETIME NULL,
+    current_period_end DATETIME NULL,
+    cancel_at_period_end TINYINT(1) NOT NULL DEFAULT 0,
+    canceled_at DATETIME NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX idx_subs_user (user_id),
+    INDEX idx_subs_plan (plan_id),
+    INDEX idx_subs_stripe_sub (stripe_subscription_id),
+    INDEX idx_subs_status (status),
+    CONSTRAINT fk_subs_user FOREIGN KEY (user_id) REFERENCES users(id) ON UPDATE CASCADE ON DELETE CASCADE,
+    CONSTRAINT fk_subs_plan FOREIGN KEY (plan_id) REFERENCES plans(id) ON UPDATE CASCADE ON DELETE RESTRICT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

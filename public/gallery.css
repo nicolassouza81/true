@@ -1,0 +1,24 @@
+.about-works { display: block; }
+.works-copy { max-width: 1000px; margin-bottom: 2.5rem; }
+.gallery-filters { display: flex; flex-wrap: wrap; gap: .7rem; margin-bottom: 2rem; }
+.gallery-filters button { padding: .8rem 1.4rem; border: 1px solid #8a8882; color: var(--ink); background: transparent; font: 700 1rem var(--body); cursor: pointer; }
+.gallery-filters button[aria-pressed=true] { background: var(--ink); color: white; border-color: var(--ink); }
+.gallery-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.5rem; }
+.gallery-card { display: block; min-width: 0; }
+.gallery-card[hidden] { display: none; }
+.gallery-card figure { position: relative; margin: 0; overflow: hidden; }
+.gallery-card img { width: 100%; aspect-ratio: 4/5; object-fit: cover; transition: transform .35s; background: #161616; }
+.gallery-card:hover img { transform: scale(1.035); }
+.gallery-card:focus-visible,.gallery-filters button:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+.gallery-card figcaption { position: relative; padding: 1rem 0; font-weight: 600; font-size: 1rem; background: var(--paper); }
+.media-type { position: absolute; top: 1rem; left: 1rem; padding: .4rem .7rem; background: rgba(8,8,8,.85); color: white; font-size: .875rem; }
+.media-viewer { width: min(1100px,95vw); max-width: 95vw; padding: 3.5rem 1rem 1rem; border: 1px solid #555; background: #101010; color: white; }
+.media-viewer::backdrop { background: rgba(0,0,0,.9); }
+.media-viewer [data-close] { position: absolute; top: .7rem; right: 1rem; padding: .5rem 1rem; border: 1px solid #777; color: white; background: #222; font: 600 1rem var(--body); cursor: pointer; }
+.media-viewer img,.media-viewer video { width: 100%; height: 70svh; object-fit: contain; }
+.media-viewer [data-caption] { margin: 1rem 0 0; font-size: 1rem; }
+.reel-frame video { object-fit: contain; aspect-ratio: auto; max-height: 75svh; }
+.reel-label { position: static; display: block; }
+@media(max-width:900px) { .gallery-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width:540px) { .gallery-grid { grid-template-columns: 1fr; } .media-viewer img,.media-viewer video { height: 65svh; } }
+@media(prefers-reduced-motion:reduce) { .gallery-card img { transition: none; } }

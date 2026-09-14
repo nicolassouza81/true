@@ -1,0 +1,39 @@
+/* ==========================================================
+   utilities.css — Classes utilitárias funcionais
+   ========================================================== */
+
+/* ---- Display ---- */
+.u-block  { display: block; }
+.u-inline { display: inline; }
+.u-flex   { display: flex; }
+.u-hidden { display: none; }
+.u-inline-actions { display: flex; gap: var(--space-2); align-items: center; }
+
+/* ---- Text ---- */
+.text--muted    { color: var(--color-text-muted); }
+.text--center   { text-align: center; }
+.text--right    { text-align: right; }
+.text--sm       { font-size: var(--text-sm); }
+.text--bold     { font-weight: var(--font-bold); }
+
+/* ---- Spacing ---- */
+.u-mt-sm  { margin-top: var(--space-2); }
+.u-mt-md  { margin-top: var(--space-4); }
+.u-mt-lg  { margin-top: var(--space-8); }
+.u-mb-sm  { margin-bottom: var(--space-2); }
+.u-mb-md  { margin-bottom: var(--space-4); }
+.u-mb-lg  { margin-bottom: var(--space-8); }
+
+/* ---- Width ---- */
+.u-full { width: 100%; }
+
+/* ---- Responsivo ---- */
+@media (max-width: 768px) {
+    .u-hide-mobile { display: none; }
+
+    .sidebar {
+        display: none; /* TODO: implementar menu mobile */
+    }
+
+    .admin-body { width: 100%; }
+}

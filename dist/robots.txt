@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://true-eventos-df.nkzdesign.chatgpt.site/sitemap.xml

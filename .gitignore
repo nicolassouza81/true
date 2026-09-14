@@ -1,0 +1,20 @@
+# Ambiente
+.env
+
+# Cache e logs gerados em runtime
+storage/cache/*
+storage/logs/*
+!storage/cache/.gitkeep
+!storage/logs/.gitkeep
+
+# Sistema
+.DS_Store
+Thumbs.db
+cookies.txt
+.openai/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo

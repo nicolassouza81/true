@@ -1,0 +1,79 @@
+.about-page { background: var(--ink); }
+.about-page .site-header { background: linear-gradient(rgba(8,8,8,.72), transparent); }
+.about-page .site-header.scrolled { background: rgba(8,8,8,.86); }
+.about-page .site-nav a[aria-current="page"]::after { transform: scaleX(1); }
+
+.about-hero { position: relative; min-height: 100svh; overflow: hidden; display: flex; align-items: flex-end; padding: 9rem var(--pad) 6rem; isolation: isolate; }
+.about-hero .hero-video { z-index: -3; }
+.about-hero-shade { position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg,rgba(5,5,8,.92),rgba(5,5,8,.4) 65%),linear-gradient(0deg,rgba(5,5,8,.88),transparent 60%); }
+.about-hero-grid { position: absolute; inset: 0; z-index: -1; opacity: .22; background-image: linear-gradient(rgba(255,255,255,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.1) 1px,transparent 1px); background-size: 11vw 11vw; mask-image: linear-gradient(to right,#000,transparent 85%); }
+.about-hero-content { width: min(1050px,88vw); }
+.about-hero h1 { margin: 0; font: clamp(3.4rem,8vw,8.5rem)/.84 var(--display); letter-spacing: -.065em; text-transform: uppercase; text-wrap: balance; }
+.about-hero h1 em { color: transparent; font-style: normal; -webkit-text-stroke: 2px var(--white); }
+.about-hero-content > p:last-child { max-width: 590px; margin: 2rem 0 0 clamp(0rem,10vw,8rem); font-size: clamp(1.05rem,1.6vw,1.35rem); }
+
+.about-story { display: grid; grid-template-columns: 1.25fr .75fr; gap: clamp(3rem,9vw,9rem); color: var(--ink); background: var(--paper); }
+.about-story .display span { color: transparent; -webkit-text-stroke: 1px var(--ink); }
+.about-story-copy { align-self: end; }
+.about-story-copy p { color: #5c5a55; }
+.about-story-copy .lead { color: var(--ink); }
+
+.about-reel { background: #121212; }
+.reel-heading { display: grid; grid-template-columns: .35fr 1fr; gap: 2rem; align-items: start; margin-bottom: 3rem; }
+.reel-heading .display { margin-top: 0; }
+.reel-frame { position: relative; overflow: hidden; border: 1px solid var(--line); }
+.reel-frame video { aspect-ratio: 16/8; object-fit: cover; background: #000; }
+.reel-label { position: absolute; left: 1.2rem; bottom: 1.2rem; padding: .55rem .7rem; background: var(--orange); color: var(--ink); font-size: .65rem; font-weight: 800; letter-spacing: .1em; }
+
+.about-works { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(3rem,8vw,8rem); align-items: center; color: var(--ink); background: var(--paper); }
+.about-works .display { font-size: clamp(2.7rem,5.6vw,6rem); }
+.about-works .display span { color: transparent; -webkit-text-stroke: 1px var(--ink); }
+.works-copy > p { max-width: 500px; margin: 2rem 0; color: #5c5a55; font-size: 1.08rem; }
+.instagram-portfolio { min-width: 0; padding: 1rem; background: var(--white); box-shadow: 1.2rem 1.2rem 0 var(--orange); }
+.instagram-portfolio iframe { display: block; width: 100%; min-height: 610px; border: 0; background: #fff; }
+.instagram-portfolio > a { display: block; padding: 1.1rem 1.5rem; color: var(--white); background: var(--ink); font-weight: 700; text-align: center; }
+.instagram-portfolio > a span { color: var(--orange); }
+
+.about-method { color: var(--ink); background: var(--acid); }
+.about-method .section-number { color: var(--ink); opacity: .6; }
+.about-method .display span { color: transparent; -webkit-text-stroke: 1px var(--ink); }
+.about-method .section-head > p { color: rgba(8,8,8,.65); }
+.about-pillars { display: grid; grid-template-columns: repeat(3,1fr); border: 1px solid rgba(8,8,8,.25); }
+.about-pillar { min-height: 300px; display: flex; flex-direction: column; justify-content: flex-end; padding: 2rem; border-right: 1px solid rgba(8,8,8,.25); }
+.about-pillar:last-child { border-right: 0; }
+.about-pillar > span { margin-bottom: auto; font: 3.5rem var(--display); color: transparent; -webkit-text-stroke: 1px rgba(8,8,8,.45); }
+.about-pillar h3 { margin: 0 0 .7rem; font: 1.65rem var(--display); text-transform: uppercase; }
+.about-pillar p { max-width: 290px; margin: 0; color: rgba(8,8,8,.65); }
+
+.about-contact { background: var(--orange); color: var(--ink); }
+.about-contact .section-number { color: var(--ink); opacity: .6; }
+.about-contact .display span { color: transparent; -webkit-text-stroke: 1px var(--ink); }
+.about-contact-grid { display: grid; grid-template-columns: repeat(3,1fr); margin: 4rem 0 2rem; border-top: 1px solid rgba(8,8,8,.3); border-bottom: 1px solid rgba(8,8,8,.3); }
+.about-contact-grid a { position: relative; min-width: 0; padding: 1.5rem; border-right: 1px solid rgba(8,8,8,.3); transition: background .25s,color .25s; }
+.about-contact-grid a:last-child { border-right: 0; }
+.about-contact-grid a:hover { background: var(--ink); color: var(--white); }
+.about-contact-grid small,.about-contact-grid strong { display: block; }
+.about-contact-grid small { margin-bottom: .5rem; text-transform: uppercase; letter-spacing: .1em; opacity: .62; }
+.about-contact-grid strong { overflow-wrap: anywhere; }
+.about-contact-grid span { position: absolute; top: 1.3rem; right: 1.3rem; }
+
+@media (max-width: 900px) {
+  .about-story,.reel-heading,.about-works { grid-template-columns: 1fr; }
+  .about-pillars { grid-template-columns: 1fr; }
+  .about-pillar { min-height: 230px; border-right: 0; border-bottom: 1px solid rgba(8,8,8,.25); }
+  .about-pillar:last-child { border-bottom: 0; }
+  .about-contact-grid { grid-template-columns: 1fr; }
+  .about-contact-grid a { border-right: 0; border-bottom: 1px solid rgba(8,8,8,.3); }
+  .about-contact-grid a:last-child { border-bottom: 0; }
+}
+
+@media (max-width: 640px) {
+  .about-hero { min-height: 92svh; padding-bottom: 5rem; }
+  .about-hero h1 { font-size: clamp(3.25rem,15vw,5.5rem); }
+  .about-hero h1 em { -webkit-text-stroke-width: 1px; }
+  .about-hero-content > p:last-child { margin-left: 0; }
+  .reel-frame video { aspect-ratio: 4/5; }
+  .reel-label { left: .75rem; bottom: .75rem; }
+  .instagram-portfolio { padding: .5rem; box-shadow: .6rem .6rem 0 var(--orange); }
+  .instagram-portfolio iframe { min-height: 560px; }
+}
