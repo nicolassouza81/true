@@ -37,24 +37,32 @@ return function (Router $router): void {
     // Público (Site Institucional TRUE Eventos)
     // ----------------------------------------------------------------
     $router->get('/', [SiteController::class, 'home']);
-    $router->get('/index.html', [SiteController::class, 'home']);
-    $router->get('/index.php', [SiteController::class, 'home']);
+    $router->get('/index.html', function (): void { Response::redirect('/', 301); });
+    $router->get('/index.php', function (): void { Response::redirect('/', 301); });
+
     $router->get('/sobre', [SiteController::class, 'about']);
     $router->get('/about', [SiteController::class, 'about']);
-    $router->get('/about.html', [SiteController::class, 'about']);
+    $router->get('/about.html', function (): void { Response::redirect('/sobre', 301); });
+    $router->get('/sobre.html', function (): void { Response::redirect('/sobre', 301); });
+
     $router->get('/orcamento', [SiteController::class, 'orcamento']);
-    $router->get('/orcamento.html', [SiteController::class, 'orcamento']);
+    $router->get('/orcamento.html', function (): void { Response::redirect('/orcamento', 301); });
+
     $router->get('/solucoes', function (): void { Response::redirect('/#solucoes'); });
     $router->get('/solucoes/{slug}', [SiteController::class, 'solucao']);
-    $router->get('/solucoes/{slug}.html', [SiteController::class, 'solucao']);
-    $router->get('/som', function (): void { Response::redirect('/solucoes/som.html'); });
-    $router->get('/som.html', function (): void { Response::redirect('/solucoes/som.html'); });
-    $router->get('/iluminacao', function (): void { Response::redirect('/solucoes/iluminacao.html'); });
-    $router->get('/iluminacao.html', function (): void { Response::redirect('/solucoes/iluminacao.html'); });
-    $router->get('/paineis-led', function (): void { Response::redirect('/solucoes/paineis-led.html'); });
-    $router->get('/paineis-led.html', function (): void { Response::redirect('/solucoes/paineis-led.html'); });
-    $router->get('/estruturas', function (): void { Response::redirect('/solucoes/estruturas.html'); });
-    $router->get('/estruturas.html', function (): void { Response::redirect('/solucoes/estruturas.html'); });
+    $router->get('/solucoes/{slug}.html', function (Request $request): void {
+        $slug = (string) $request->param('slug');
+        Response::redirect("/solucoes/{$slug}", 301);
+    });
+
+    $router->get('/som', function (): void { Response::redirect('/solucoes/som', 301); });
+    $router->get('/som.html', function (): void { Response::redirect('/solucoes/som', 301); });
+    $router->get('/iluminacao', function (): void { Response::redirect('/solucoes/iluminacao', 301); });
+    $router->get('/iluminacao.html', function (): void { Response::redirect('/solucoes/iluminacao', 301); });
+    $router->get('/paineis-led', function (): void { Response::redirect('/solucoes/paineis-led', 301); });
+    $router->get('/paineis-led.html', function (): void { Response::redirect('/solucoes/paineis-led', 301); });
+    $router->get('/estruturas', function (): void { Response::redirect('/solucoes/estruturas', 301); });
+    $router->get('/estruturas.html', function (): void { Response::redirect('/solucoes/estruturas', 301); });
     $router->get('/processo', function (): void { Response::redirect('/#processo'); });
     $router->get('/como-funciona', function (): void { Response::redirect('/#processo'); });
 

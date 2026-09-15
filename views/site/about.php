@@ -13,18 +13,18 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="about.css" />
   <link rel="stylesheet" href="gallery.css" />
-  <link rel="canonical" href="https://true-eventos-df.nkzdesign.chatgpt.site/about.html" />
+  <link rel="canonical" href="https://trueeventos.com.br/sobre" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:site_name" content="TRUE Eventos" />
   <meta property="og:title" content="Sobre a TRUE — TRUE Eventos" />
   <meta property="og:description" content="Conheça a TRUE Eventos, parceira técnica para som, iluminação, painéis de LED e estruturas em Brasília e região." />
-  <meta property="og:url" content="https://true-eventos-df.nkzdesign.chatgpt.site/about.html" />
+  <meta property="og:url" content="https://trueeventos.com.br/sobre" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Sobre a TRUE — TRUE Eventos" />
   <meta name="twitter:description" content="Conheça a TRUE Eventos, parceira técnica para som, iluminação, painéis de LED e estruturas em Brasília e região." />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://true-eventos-df.nkzdesign.chatgpt.site/#organization", "name": "TRUE Eventos", "url": "https://true-eventos-df.nkzdesign.chatgpt.site/", "logo": "https://true-eventos-df.nkzdesign.chatgpt.site/assets/brand/true-horizontal-black.svg", "telephone": "+5561998448371", "email": "alquimiaeventosdf@hotmail.com", "sameAs": ["https://www.instagram.com/trueeventosdf/"], "areaServed": {"@type": "Place", "name": "Brasília e região"}}, {"@type": "WebSite", "@id": "https://true-eventos-df.nkzdesign.chatgpt.site/#website", "url": "https://true-eventos-df.nkzdesign.chatgpt.site/", "name": "TRUE Eventos", "inLanguage": "pt-BR", "publisher": {"@id": "https://true-eventos-df.nkzdesign.chatgpt.site/#organization"}}, {"@type": "AboutPage", "@id": "https://true-eventos-df.nkzdesign.chatgpt.site/about.html#page", "url": "https://true-eventos-df.nkzdesign.chatgpt.site/about.html", "name": "Sobre a TRUE — TRUE Eventos", "description": "Conheça a TRUE Eventos, parceira técnica para som, iluminação, painéis de LED e estruturas em Brasília e região.", "inLanguage": "pt-BR", "isPartOf": {"@id": "https://true-eventos-df.nkzdesign.chatgpt.site/#website"}, "about": {"@id": "https://true-eventos-df.nkzdesign.chatgpt.site/#organization"}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://trueeventos.com.br/#organization", "name": "TRUE Eventos", "url": "https://trueeventos.com.br/", "logo": "https://trueeventos.com.br/assets/brand/true-horizontal-black.svg", "telephone": "+5561998448371", "email": "alquimiaeventosdf@hotmail.com", "sameAs": ["https://www.instagram.com/trueeventosdf/"], "areaServed": {"@type": "Place", "name": "Brasília e região"}}, {"@type": "WebSite", "@id": "https://trueeventos.com.br/#website", "url": "https://trueeventos.com.br/", "name": "TRUE Eventos", "inLanguage": "pt-BR", "publisher": {"@id": "https://trueeventos.com.br/#organization"}}, {"@type": "AboutPage", "@id": "https://trueeventos.com.br/sobre#page", "url": "https://trueeventos.com.br/sobre", "name": "Sobre a TRUE — TRUE Eventos", "description": "Conheça a TRUE Eventos, parceira técnica para som, iluminação, painéis de LED e estruturas em Brasília e região.", "inLanguage": "pt-BR", "isPartOf": {"@id": "https://trueeventos.com.br/#website"}, "about": {"@id": "https://trueeventos.com.br/#organization"}}]}</script>
   <link rel="stylesheet" href="mobile-quote.css" />
 </head>
 <body class="about-page">
@@ -35,8 +35,8 @@
     <nav id="site-nav" class="site-nav" aria-label="Navegação principal">
       <a href="/#solucoes">Soluções</a>
       <a href="/#processo">Como funciona</a>
-      <a href="/about.html" aria-current="page">A TRUE</a>
-      <a class="nav-cta" href="/orcamento.html">Pedir orçamento</a>
+      <a href="/sobre" aria-current="page">A TRUE</a>
+      <a class="nav-cta" href="/orcamento">Pedir orçamento</a>
     </nav>
   </header>
 
@@ -218,7 +218,7 @@
         <a href="mailto:alquimiaeventosdf@hotmail.com"><small>E-mail</small><strong>alquimiaeventosdf@hotmail.com</strong><span>↗</span></a>
         <a href="https://www.instagram.com/trueeventosdf/" target="_blank" rel="noreferrer"><small>Instagram</small><strong>@trueeventosdf</strong><span>↗</span></a>
       </div>
-      <a class="button button-light magnetic reveal" href="/orcamento.html">Solicitar orçamento <span>→</span></a>
+      <a class="button button-light magnetic reveal" href="/orcamento">Solicitar orçamento <span>→</span></a>
     </section>
   </main>
 
@@ -231,7 +231,7 @@
   <script src="script.js"></script>
   <dialog class="media-viewer" data-viewer aria-label="Visualização da galeria"><button type="button" data-close autofocus>Fechar ×</button><div data-stage></div><p data-caption></p></dialog>
   <script src="gallery.js"></script>
-<aside class="mobile-quote" data-mobile-quote aria-label="Solicitar orçamento"><a href="/orcamento.html">Pedir orçamento</a></aside>
+<aside class="mobile-quote" data-mobile-quote aria-label="Solicitar orçamento"><a href="/orcamento">Pedir orçamento</a></aside>
 <script src="mobile-quote.js"></script>
 </body>
 </html>

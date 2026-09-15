@@ -35,8 +35,8 @@
     <nav id="site-nav" class="site-nav" aria-label="Navegação principal">
       <a href="/#solucoes">Soluções</a>
       <a href="/#processo">Como funciona</a>
-      <a href="/about.html">A TRUE</a>
-      <a class="nav-cta" href="/orcamento.html">Pedir orçamento</a>
+      <a href="/sobre">A TRUE</a>
+      <a class="nav-cta" href="/orcamento">Pedir orçamento</a>
     </nav>
   </header>
 
@@ -53,7 +53,7 @@
         <h1 id="hero-title">SEU EVENTO<br />PRECISA SER<br /><em>VIVIDO.</em></h1>
         <p class="hero-copy">Som, luz, LED e estrutura trabalhando juntos para transformar sua ideia em uma experiência que ninguém esquece.</p>
         <div class="hero-actions">
-          <a class="button button-primary magnetic" href="orcamento.html">Solicitar orçamento <span>→</span></a>
+          <a class="button button-primary magnetic" href="/orcamento">Solicitar orçamento <span>→</span></a>
           <a class="text-link" href="#solucoes">Conheça as soluções <span>↓</span></a>
         </div>
       </div>
@@ -82,25 +82,25 @@
         <p>Uma operação integrada reduz riscos, simplifica decisões e eleva a percepção do seu evento.</p>
       </div>
       <div class="service-list">
-        <a class="service reveal" data-service="som" href="/solucoes/som.html" aria-label="Conhecer solução de som">
+        <a class="service reveal" data-service="som" href="/solucoes/som" aria-label="Conhecer solução de som">
           <span class="service-num">01</span>
           <h3>Som</h3>
           <p>Clareza, potência e cobertura dimensionadas para o seu espaço.</p>
           <span class="service-arrow" aria-hidden="true">↗</span>
         </a>
-        <a class="service reveal" data-service="luz" href="/solucoes/iluminacao.html" aria-label="Conhecer solução de iluminação">
+        <a class="service reveal" data-service="luz" href="/solucoes/iluminacao" aria-label="Conhecer solução de iluminação">
           <span class="service-num">02</span>
           <h3>Iluminação</h3>
           <p>Cenas que conduzem a atenção, criam atmosfera e valorizam cada momento.</p>
           <span class="service-arrow" aria-hidden="true">↗</span>
         </a>
-        <a class="service reveal" data-service="led" href="/solucoes/paineis-led.html" aria-label="Conhecer solução de painéis de LED">
+        <a class="service reveal" data-service="led" href="/solucoes/paineis-led" aria-label="Conhecer solução de painéis de LED">
           <span class="service-num">03</span>
           <h3>Painéis de LED</h3>
           <p>Conteúdo com presença, definição e impacto para qualquer formato.</p>
           <span class="service-arrow" aria-hidden="true">↗</span>
         </a>
-        <a class="service reveal" data-service="estrutura" href="/solucoes/estruturas.html" aria-label="Conhecer solução de estruturas">
+        <a class="service reveal" data-service="estrutura" href="/solucoes/estruturas" aria-label="Conhecer solução de estruturas">
           <span class="service-num">04</span>
           <h3>Estruturas</h3>
           <p>Montagem segura e planejada para sustentar toda a experiência.</p>
@@ -223,7 +223,7 @@
         <p class="success-pre reveal">O público não vai lembrar dos cabos.</p>
         <h2 id="success-title" class="reveal">VAI LEMBRAR<br />DO QUE <em>SENTIU.</em></h2>
         <p class="success-copy reveal">Sua próxima experiência começa com uma conversa.</p>
-        <a class="button button-light magnetic reveal" href="orcamento.html">Pedir orçamento <span>→</span></a>
+        <a class="button button-light magnetic reveal" href="/orcamento">Pedir orçamento <span>→</span></a>
       </div>
       <div class="ticker" aria-hidden="true">
         <div>TRUE EVENTOS · SOM · LUZ · LED · ESTRUTURA · TRUE EVENTOS · SOM · LUZ · LED · ESTRUTURA ·</div>
@@ -239,7 +239,7 @@
   </footer>
 
   <script src="script.js"></script>
-<aside class="mobile-quote" data-mobile-quote aria-label="Solicitar orçamento"><a href="orcamento.html">Pedir orçamento</a></aside>
+<aside class="mobile-quote" data-mobile-quote aria-label="Solicitar orçamento"><a href="/orcamento">Pedir orçamento</a></aside>
 <script src="mobile-quote.js"></script>
 </body>
 </html>

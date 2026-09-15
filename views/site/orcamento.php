@@ -12,18 +12,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="budget.css" />
-  <link rel="canonical" href="https://true-eventos-df.nkzdesign.chatgpt.site/orcamento.html" />
+  <link rel="canonical" href="https://trueeventos.com.br/orcamento" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:site_name" content="TRUE Eventos" />
   <meta property="og:title" content="Solicitar orçamento — TRUE Eventos" />
   <meta property="og:description" content="Solicite um orçamento para som, iluminação, painéis de LED e estruturas com a TRUE Eventos." />
-  <meta property="og:url" content="https://true-eventos-df.nkzdesign.chatgpt.site/orcamento.html" />
+  <meta property="og:url" content="https://trueeventos.com.br/orcamento" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Solicitar orçamento — TRUE Eventos" />
   <meta name="twitter:description" content="Solicite um orçamento para som, iluminação, painéis de LED e estruturas com a TRUE Eventos." />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://true-eventos-df.nkzdesign.chatgpt.site/#organization", "name": "TRUE Eventos", "url": "https://true-eventos-df.nkzdesign.chatgpt.site/", "logo": "https://true-eventos-df.nkzdesign.chatgpt.site/assets/brand/true-horizontal-black.svg", "telephone": "+5561998448371", "email": "alquimiaeventosdf@hotmail.com", "sameAs": ["https://www.instagram.com/trueeventosdf/"], "areaServed": {"@type": "Place", "name": "Brasília e região"}}, {"@type": "WebSite", "@id": "https://true-eventos-df.nkzdesign.chatgpt.site/#website", "url": "https://true-eventos-df.nkzdesign.chatgpt.site/", "name": "TRUE Eventos", "inLanguage": "pt-BR", "publisher": {"@id": "https://true-eventos-df.nkzdesign.chatgpt.site/#organization"}}, {"@type": "WebPage", "@id": "https://true-eventos-df.nkzdesign.chatgpt.site/orcamento.html#page", "url": "https://true-eventos-df.nkzdesign.chatgpt.site/orcamento.html", "name": "Solicitar orçamento — TRUE Eventos", "description": "Solicite um orçamento para som, iluminação, painéis de LED e estruturas com a TRUE Eventos.", "inLanguage": "pt-BR", "isPartOf": {"@id": "https://true-eventos-df.nkzdesign.chatgpt.site/#website"}, "about": {"@id": "https://true-eventos-df.nkzdesign.chatgpt.site/#organization"}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://trueeventos.com.br/#organization", "name": "TRUE Eventos", "url": "https://trueeventos.com.br/", "logo": "https://trueeventos.com.br/assets/brand/true-horizontal-black.svg", "telephone": "+5561998448371", "email": "alquimiaeventosdf@hotmail.com", "sameAs": ["https://www.instagram.com/trueeventosdf/"], "areaServed": {"@type": "Place", "name": "Brasília e região"}}, {"@type": "WebSite", "@id": "https://trueeventos.com.br/#website", "url": "https://trueeventos.com.br/", "name": "TRUE Eventos", "inLanguage": "pt-BR", "publisher": {"@id": "https://trueeventos.com.br/#organization"}}, {"@type": "WebPage", "@id": "https://trueeventos.com.br/orcamento#page", "url": "https://trueeventos.com.br/orcamento", "name": "Solicitar orçamento — TRUE Eventos", "description": "Solicite um orçamento para som, iluminação, painéis de LED e estruturas com a TRUE Eventos.", "inLanguage": "pt-BR", "isPartOf": {"@id": "https://trueeventos.com.br/#website"}, "about": {"@id": "https://trueeventos.com.br/#organization"}}]}</script>
 </head>
 <body class="budget-page">
   <div class="scroll-progress" aria-hidden="true"><span></span></div>
