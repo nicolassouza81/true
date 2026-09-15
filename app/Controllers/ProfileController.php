@@ -23,9 +23,7 @@ final class ProfileController
         Response::view('profile/view_profile', [
             'title' => 'Meu perfil',
             'user'  => Auth::user(),
-            'error' => Session::getFlash('error'),
-            'success' => Session::getFlash('success'),
-        ]);
+        ], 'admin');
     }
 
     public function update(Request $request): void

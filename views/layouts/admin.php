@@ -847,6 +847,14 @@ $currentUri = $_SERVER['REQUEST_URI'] ?? '/admin';
                 <span>Usuários / Equipe</span>
             </a>
 
+            <a href="/profile" class="sidebar__link <?= str_starts_with($currentUri, '/profile') ? 'active' : '' ?>">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <span>Meu Perfil</span>
+            </a>
+
             <div class="sidebar__divider">
                 <a href="/" target="_blank" class="sidebar__link">
                     <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -860,10 +868,10 @@ $currentUri = $_SERVER['REQUEST_URI'] ?? '/admin';
         </nav>
 
         <div class="sidebar__footer">
-            <div class="sidebar__user-info">
+            <a href="/profile" class="sidebar__user-info" style="text-decoration:none;" title="Editar Perfil">
                 <span class="sidebar__user-name"><?= htmlspecialchars(\Core\Auth::user()['name'] ?? 'Administrador') ?></span>
                 <span class="sidebar__user-role">Gestor TRUE</span>
-            </div>
+            </a>
             <form action="/logout" method="POST" style="margin:0;">
                 <input type="hidden" name="_csrf" value="<?= \Core\Session::csrfToken() ?>">
                 <button type="submit" class="sidebar__logout-btn" title="Encerrar Sessão">
