@@ -18,3 +18,6 @@ cookies.txt
 .vscode/
 *.swp
 *.swo
+
+# Pacotes de deploy
+deploy_hostinger.zip
