@@ -15,7 +15,7 @@
 }
 
 .auth-title {
-    font-family: "Archivo Black", Impact, sans-serif;
+    font-family: "Archivo Black", Impact, sans-serif; font-weight: 400; font-synthesis: none;
     font-size: 1.85rem;
     line-height: 1.1;
     letter-spacing: -0.02em;

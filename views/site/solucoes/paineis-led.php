@@ -9,7 +9,7 @@
   <link rel="icon" href="/assets/brand/true-square-white-on-black.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
   <link rel="stylesheet" href="/solucoes/solution.css" />
   <link rel="canonical" href="https://trueeventos.com.br/solucoes/paineis-led" />
@@ -55,7 +55,7 @@
       <div class="outcome-grid">
         <div class="outcome-kicker reveal"><div class="section-number">01 / O QUE MUDA</div><p>Sua marca e conteúdo visível em qualquer ângulo e sob qualquer luz.</p></div>
         <div>
-          <h2 class="reveal">SEU CONTEÚDO <span class="accent-dark">COM O DESTINGUE</span><br />QUE MERECE.<span></span></h2>
+          <h2 class="reveal">SEU CONTEÚDO <span class="accent-dark">COM O DESTAQUE</span><br />QUE MERECE.<span></span></h2>
           <p class="outcome-lead reveal">Painéis de LED de alta resolução garantem que vídeos, dados e marcas sejam vistos com perfeição por todo o público.</p>
           <p class="outcome-copy reveal">A TRUE fornece painéis de LED indoor e outdoor com processamento de imagem dedicado e suporte técnico contínuo durante todo o evento.</p>
         </div>
@@ -83,7 +83,7 @@
 
     <section class="solution-cta" data-word="LED">
       <div class="solution-cta-inner">
-        <div class="section-number reveal">VAMOS CONVERSAR</div><h2 class="reveal">LEVE ALTA IMPACTO<br />AO SEU <span>EVENTO.</span></h2>
+        <div class="section-number reveal">VAMOS CONVERSAR</div><h2 class="reveal">LEVE ALTO IMPACTO<br />AO SEU <span>EVENTO.</span></h2>
         <p class="reveal">Solicite um projeto de painel de LED sob medida com a TRUE.</p>
         <a class="button button-primary magnetic reveal" href="/orcamento?servico=paineis-led">Solicitar orçamento <span>→</span></a>
       </div>

@@ -28,7 +28,7 @@
     --color-info:           #17a2b8;
 
     /* ---- Tipografia ---- */
-    --font-sans:    'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-sans:    'DM Sans', 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
     --font-mono:    'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
 
     --text-xs:   0.75rem;

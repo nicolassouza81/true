@@ -7,7 +7,7 @@
     <link rel="icon" href="<?= \Core\Config::get('app.branding.favicon') ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&display=swap" rel="stylesheet">
     <style>
     /* =============================================================
        TRUE EVENTOS — Layout de Autenticação (Standalone)
@@ -36,6 +36,8 @@
         color: #d4d4d4;
         font-family: var(--body);
         -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -43,6 +45,8 @@
         position: relative;
         overflow: hidden;
     }
+
+    h1, h2, h3, strong, b { font-synthesis: none; }
 
     /* Orange glow — top-left */
     body::after {
@@ -110,6 +114,125 @@
             0 32px 64px rgba(0,0,0,0.7),
             0 4px 16px rgba(0,0,0,0.5);
         position: relative;
+    }
+
+    .auth-page.container .auth-card {
+        padding: 0;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .auth-card__title {
+        font-family: var(--display);
+        font-weight: 400;
+        font-synthesis: none;
+        font-size: 1.75rem;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: var(--white);
+        margin-bottom: 1.25rem;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .form__group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+    }
+
+    .form__label {
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.10em;
+        color: var(--muted);
+        font-family: var(--body);
+    }
+
+    .form__input {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        background: var(--surface-input);
+        border: 1px solid var(--line-strong);
+        border-radius: 6px;
+        color: var(--white);
+        font-family: var(--body);
+        font-size: 0.9375rem;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form__input:focus {
+        outline: none;
+        border-color: var(--orange);
+        background: #111;
+        box-shadow: 0 0 0 3px var(--orange-glow);
+    }
+
+    .btn--primary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0.9rem 1.5rem;
+        background: var(--orange);
+        color: var(--white);
+        border: none;
+        border-radius: 6px;
+        font-family: var(--body);
+        font-size: 0.875rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        cursor: pointer;
+        transition: all 0.22s ease;
+    }
+
+    .btn--primary:hover {
+        background: var(--acid);
+        color: var(--ink);
+    }
+
+    .auth-card__switch {
+        margin-top: 1.25rem;
+        text-align: center;
+        font-size: 0.825rem;
+    }
+
+    .auth-card__switch a {
+        color: var(--muted);
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .auth-card__switch a:hover {
+        color: var(--orange);
+    }
+
+    .alert {
+        padding: 0.85rem 1.1rem;
+        border-radius: 6px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin-bottom: 1.25rem;
+    }
+
+    .alert--error {
+        background: rgba(255,75,25,0.10);
+        border: 1px solid rgba(255,75,25,0.35);
+        color: #ff8a6a;
+    }
+
+    .alert--success {
+        background: rgba(220,255,54,0.08);
+        border: 1px solid rgba(220,255,54,0.35);
+        color: var(--acid);
     }
 
     /* Bottom orange accent line */

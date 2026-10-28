@@ -77,7 +77,7 @@ if (!headers_sent()) {
     header("Permissions-Policy: camera=(), microphone=(), geolocation=()");
 
     if (!$debug) {
-        header("Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self';");
+        header("Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com; frame-src 'self' https://www.instagram.com; connect-src 'self';");
     }
 }
 

@@ -7,7 +7,7 @@
     <link rel="icon" href="<?= \Core\Config::get('app.branding.favicon') ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/css/tokens.css">
     <link rel="stylesheet" href="/public/css/reset.css">
     <link rel="stylesheet" href="/public/css/base.css">
@@ -53,7 +53,7 @@
         font-size: 0.9375rem !important;
         line-height: 1.5 !important;
         margin: 0 !important;
-        -webkit-font-smoothing: antialiased;
+        -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; font-synthesis: none;
     }
 
     /* ---- Sidebar ---- */
@@ -231,7 +231,7 @@
     .admin-header__title {
         font-family: var(--display) !important;
         font-size: 1.35rem !important;
-        font-weight: 900 !important;
+        font-weight: 400 !important; font-synthesis: none !important;
         letter-spacing: -0.01em !important;
         text-transform: uppercase !important;
         color: var(--white) !important;
@@ -254,7 +254,7 @@
 
     .admin-section__header h2 {
         font-family: var(--display) !important;
-        font-size: 1.5rem !important;
+        font-size: 1.5rem !important; font-weight: 400 !important; font-synthesis: none !important;
         letter-spacing: -0.02em !important;
         text-transform: uppercase !important;
         color: var(--white) !important;
@@ -421,7 +421,7 @@
 
     .dashboard__greeting {
         font-family: var(--display) !important;
-        font-size: 1.75rem !important;
+        font-size: 1.75rem !important; font-weight: 400 !important; font-synthesis: none !important;
         letter-spacing: -0.02em !important;
         text-transform: uppercase !important;
         color: var(--white) !important;
@@ -435,7 +435,7 @@
 
     .stat-number {
         font-family: var(--display) !important;
-        font-size: 2.4rem !important;
+        font-size: 2.4rem !important; font-weight: 400 !important; font-synthesis: none !important;
         line-height: 1 !important;
         color: var(--white) !important;
         margin: 0.6rem 0 0 !important;

@@ -9,7 +9,7 @@
   <link rel="icon" href="assets/brand/true-square-white-on-black.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="about.css" />
   <link rel="stylesheet" href="gallery.css" />
@@ -156,8 +156,8 @@
       </div>
       <div class="logo-marquee reveal" aria-label="Clientes e parceiros">
         <div class="logo-track" role="list">
-          <?php 
-          $logoList = !empty($logos) ? $logos : [
+          <?php
+          $defaultLogos = [
               ['name' => 'PRISMA', 'logo_url' => '/assets/logos/prisma.svg', 'alt_text' => 'PRISMA experiências'],
               ['name' => 'VORA +', 'logo_url' => '/assets/logos/vora.svg', 'alt_text' => 'VORA +'],
               ['name' => 'ALTTA', 'logo_url' => '/assets/logos/altta.svg', 'alt_text' => 'ALTTA corporativo'],
@@ -165,45 +165,53 @@
               ['name' => 'BRAVA', 'logo_url' => '/assets/logos/brava.svg', 'alt_text' => 'BRAVA produções'],
               ['name' => 'ORBE', 'logo_url' => '/assets/logos/orbe.svg', 'alt_text' => 'ORBE'],
           ];
+          $validLogos = array_values(array_filter($logos ?? [], static fn(array $l): bool => strpos((string) ($l['logo_url'] ?? ''), 'placehold.co') === false));
+          $logoList = !empty($validLogos) ? $validLogos : $defaultLogos;
           $trackItems = $logoList;
           while (count($trackItems) < 6) {
               $trackItems = array_merge($trackItems, $logoList);
           }
+          $renderMockLogoContent = static function (array $lg): array {
+              $url = strtolower((string) ($lg['logo_url'] ?? ''));
+              $name = strtoupper(trim((string) ($lg['name'] ?? '')));
+              if (str_contains($url, 'prisma.svg') || $name === 'PRISMA') {
+                  return ['class' => 'mock-logo prisma', 'html' => 'PRISMA<small>experiências</small>'];
+              }
+              if (str_contains($url, 'vora.svg') || str_starts_with($name, 'VORA')) {
+                  return ['class' => 'mock-logo vora', 'html' => 'VORA<span>+</span>'];
+              }
+              if (str_contains($url, 'altta.svg') || $name === 'ALTTA') {
+                  return ['class' => 'mock-logo altta', 'html' => 'ALTTA<small>corporativo</small>'];
+              }
+              if (str_contains($url, 'nexum.svg') || $name === 'NEXUM') {
+                  return ['class' => 'mock-logo nexum', 'html' => '<b>N</b>NEXUM'];
+              }
+              if (str_contains($url, 'brava.svg') || $name === 'BRAVA') {
+                  return ['class' => 'mock-logo brava', 'html' => 'BRAVA<small>produções</small>'];
+              }
+              if (str_contains($url, 'orbe.svg') || $name === 'ORBE') {
+                  return ['class' => 'mock-logo orbe', 'html' => 'ORBE<span>○</span>'];
+              }
+              if (!empty($lg['logo_url'])) {
+                  $img = '<img src="' . htmlspecialchars((string) $lg['logo_url']) . '" alt="' . htmlspecialchars((string) (($lg['alt_text'] ?? '') ?: $lg['name'])) . '" style="max-height: 48px; max-width: 170px; object-fit: contain; opacity: 0.85; transition: all .3s ease;" loading="lazy">';
+                  return ['class' => 'mock-logo', 'html' => $img];
+              }
+              return ['class' => 'mock-logo', 'html' => '<span style="font: 400 1.5rem var(--display); font-synthesis: none; letter-spacing: .1em;">' . htmlspecialchars((string) $lg['name']) . '</span>'];
+          };
           ?>
-          <?php foreach ($trackItems as $lg): ?>
+          <?php foreach ($trackItems as $lg): $rendered = $renderMockLogoContent($lg); ?>
             <?php if (!empty($lg['website_url'])): ?>
-              <a href="<?= htmlspecialchars($lg['website_url']) ?>" target="_blank" rel="noopener" class="mock-logo" title="<?= htmlspecialchars($lg['name']) ?>" role="listitem">
+              <a href="<?= htmlspecialchars((string) $lg['website_url']) ?>" target="_blank" rel="noopener" class="<?= $rendered['class'] ?>" title="<?= htmlspecialchars((string) $lg['name']) ?>" role="listitem"><?= $rendered['html'] ?></a>
             <?php else: ?>
-              <div class="mock-logo" title="<?= htmlspecialchars($lg['name']) ?>" role="listitem">
-            <?php endif; ?>
-                <?php if (!empty($lg['logo_url'])): ?>
-                  <img src="<?= htmlspecialchars($lg['logo_url']) ?>" alt="<?= htmlspecialchars($lg['alt_text'] ?: $lg['name']) ?>" style="max-height: 48px; max-width: 170px; object-fit: contain; opacity: 0.8; transition: all .3s ease;" loading="lazy">
-                <?php else: ?>
-                  <span style="font: 1.5rem var(--display); letter-spacing: .1em;"><?= htmlspecialchars($lg['name']) ?></span>
-                <?php endif; ?>
-            <?php if (!empty($lg['website_url'])): ?>
-              </a>
-            <?php else: ?>
-              </div>
+              <div class="<?= $rendered['class'] ?>" title="<?= htmlspecialchars((string) $lg['name']) ?>" role="listitem"><?= $rendered['html'] ?></div>
             <?php endif; ?>
           <?php endforeach; ?>
 
-          <?php /* Duplicata para efeito de loop infinito */ ?>
-          <?php foreach ($trackItems as $lg): ?>
+          <?php foreach ($trackItems as $lg): $rendered = $renderMockLogoContent($lg); ?>
             <?php if (!empty($lg['website_url'])): ?>
-              <a href="<?= htmlspecialchars($lg['website_url']) ?>" target="_blank" rel="noopener" class="mock-logo" title="<?= htmlspecialchars($lg['name']) ?>" aria-hidden="true" tabindex="-1">
+              <a href="<?= htmlspecialchars((string) $lg['website_url']) ?>" target="_blank" rel="noopener" class="<?= $rendered['class'] ?>" title="<?= htmlspecialchars((string) $lg['name']) ?>" aria-hidden="true" tabindex="-1"><?= $rendered['html'] ?></a>
             <?php else: ?>
-              <div class="mock-logo" title="<?= htmlspecialchars($lg['name']) ?>" aria-hidden="true">
-            <?php endif; ?>
-                <?php if (!empty($lg['logo_url'])): ?>
-                  <img src="<?= htmlspecialchars($lg['logo_url']) ?>" alt="" style="max-height: 48px; max-width: 170px; object-fit: contain; opacity: 0.8; transition: all .3s ease;" loading="lazy">
-                <?php else: ?>
-                  <span style="font: 1.5rem var(--display); letter-spacing: .1em;"><?= htmlspecialchars($lg['name']) ?></span>
-                <?php endif; ?>
-            <?php if (!empty($lg['website_url'])): ?>
-              </a>
-            <?php else: ?>
-              </div>
+              <div class="<?= $rendered['class'] ?>" title="<?= htmlspecialchars((string) $lg['name']) ?>" aria-hidden="true"><?= $rendered['html'] ?></div>
             <?php endif; ?>
           <?php endforeach; ?>
         </div>

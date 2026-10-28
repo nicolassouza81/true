@@ -9,7 +9,7 @@
   <link rel="icon" href="assets/brand/true-square-white-on-black.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="budget.css" />
   <link rel="canonical" href="https://trueeventos.com.br/orcamento" />
@@ -108,7 +108,7 @@
               <span class="channel-icon" style="background: rgba(0,0,0,0.25); border-color: rgba(255,255,255,0.4); font-size: 1.2rem;">⚡</span>
               <span>
                 <small style="color: rgba(255,255,255,0.85); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700;">Disparo imediato</small>
-                <strong style="font-size: 1.15rem; color: #ffffff; text-transform: uppercase; font-family: var(--display); letter-spacing: -0.01em;">Enviar Orçamento (WhatsApp e E-mail)</strong>
+                <strong style="font-size: 1.15rem; color: #ffffff; text-transform: uppercase; font-family: var(--display); font-weight: 400; font-synthesis: none; letter-spacing: -0.01em;">Enviar Orçamento (WhatsApp e E-mail)</strong>
               </span>
               <b style="font-size: 1.3rem;">↗</b>
             </button>
@@ -130,7 +130,7 @@
           <div class="submission-feedback" data-feedback style="display: none; margin-top: 1.5rem; padding: 1.8rem; border-radius: 8px; background: #080808; color: #ffffff; border: 1px solid rgba(220, 255, 54, 0.4); box-shadow: 0 12px 32px rgba(0,0,0,0.5);">
             <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.85rem;">
               <span style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: #dcff36; color: #080808; font-weight: 900; font-size: 1.1rem;">✓</span>
-              <h3 style="margin: 0; font-family: var(--display); color: #dcff36; font-size: 1.35rem; text-transform: uppercase; letter-spacing: -0.01em;">Orçamento Enviado com Sucesso!</h3>
+              <h3 style="margin: 0; font-family: var(--display); font-weight: 400; font-synthesis: none; color: #dcff36; font-size: 1.35rem; text-transform: uppercase; letter-spacing: -0.01em;">Orçamento Enviado com Sucesso!</h3>
             </div>
             <p style="margin: 0 0 1.25rem; font-size: 0.95rem; color: #f2f0eb; line-height: 1.6;">
               Notificação enviada imediatamente por <strong>e-mail</strong> para nossa equipe técnica e conversa no <strong>WhatsApp</strong> iniciada. Caso a janela do WhatsApp não tenha aberto automaticamente, clique no botão abaixo:

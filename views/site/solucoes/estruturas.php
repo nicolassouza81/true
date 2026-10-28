@@ -9,7 +9,7 @@
   <link rel="icon" href="/assets/brand/true-square-white-on-black.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
   <link rel="stylesheet" href="/solucoes/solution.css" />
   <link rel="canonical" href="https://trueeventos.com.br/solucoes/estruturas" />
@@ -43,7 +43,7 @@
       <div class="hero-noise" aria-hidden="true"></div><div class="solution-index" aria-hidden="true">04</div>
       <div class="solution-hero-inner">
         <div class="breadcrumb"><a href="/">Início</a><i></i><span>Estruturas técnicas</span></div>
-        <h1 id="solution-title">SUPOSTE<br />TÉCNICO<br /><span class="outline">E RIGOR</span></h1>
+        <h1 id="solution-title">SUPORTE<br />TÉCNICO<br /><span class="outline">E RIGOR</span></h1>
         <div class="solution-hero-copy">
           <p>Praticáveis, treliças de alumínio (box truss), palcos e pontos de fixação dimensionados com segurança absoluta.</p><div class="solution-meta"><span>Segurança</span><span>Rigidez</span><span>Montagem</span></div>
         </div>

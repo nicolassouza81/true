@@ -9,13 +9,13 @@
 .budget-intro::after { content: ""; position: absolute; inset: 0; opacity: .18; background-image: linear-gradient(rgba(8,8,8,.18) 1px, transparent 1px), linear-gradient(90deg,rgba(8,8,8,.18) 1px,transparent 1px); background-size: 5rem 5rem; mask-image: linear-gradient(#000,transparent); }
 .budget-intro-inner { position: relative; z-index: 2; }
 .budget-intro .section-number { color: var(--ink); opacity: .65; }
-.budget-intro h1 { margin: 1.5rem 0 2rem; font: clamp(3rem, 6vw, 6.8rem)/.83 var(--display); letter-spacing: -.07em; text-transform: uppercase; }
-.budget-intro h1 span { color: transparent; -webkit-text-stroke: 1px var(--ink); }
+.budget-intro h1 { margin: 1.5rem 0 2rem; font: 400 clamp(3rem, 6vw, 6.8rem)/.9 var(--display); font-synthesis: none; letter-spacing: -.04em; text-transform: uppercase; }
+.budget-intro h1 span { color: transparent; font-weight: 400; -webkit-text-stroke: 1.25px var(--ink); }
 .budget-intro-inner > p { max-width: 450px; font-size: 1.05rem; font-weight: 600; }
 .contact-mini { display: grid; grid-template-columns: auto 1fr; gap: .35rem 1.2rem; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(8,8,8,.3); font-size: .76rem; }
 .contact-mini span { opacity: .6; text-transform: uppercase; letter-spacing: .08em; }
 .contact-mini a { font-weight: 700; }
-.budget-word { position: absolute; right: -1rem; bottom: -2rem; color: transparent; font: 12rem/.8 var(--display); letter-spacing: -.1em; -webkit-text-stroke: 1px rgba(8,8,8,.18); transform: rotate(-90deg) translateX(100%); transform-origin: right bottom; }
+.budget-word { position: absolute; right: -1rem; bottom: -2rem; color: transparent; font: 400 12rem/.85 var(--display); font-synthesis: none; letter-spacing: -.06em; -webkit-text-stroke: 1px rgba(8,8,8,.18); transform: rotate(-90deg) translateX(100%); transform-origin: right bottom; }
 .budget-workspace { min-height: calc(100svh - 5.2rem); padding: clamp(2.5rem, 6vw, 6rem); background: var(--paper); color: var(--ink); }
 .form-topline { display: grid; grid-template-columns: auto 1fr; gap: 2rem; align-items: center; padding-bottom: 2rem; border-bottom: 1px solid #cbc8c0; font-size: .7rem; letter-spacing: .12em; }
 .form-topline strong { margin-left: .4rem; font-size: 1.1rem; color: var(--orange); }
@@ -28,7 +28,7 @@
 .step-heading { display: grid; grid-template-columns: 4rem 1fr; gap: 1rem; align-items: start; margin-bottom: 3rem; }
 .step-heading > span { color: var(--orange); font-size: .75rem; font-weight: 700; }
 .step-heading p { margin: 0 0 .5rem; color: #76736d; font-size: .9rem; }
-.step-heading h2 { margin: 0; font: clamp(2.5rem, 5vw, 5.4rem)/.88 var(--display); letter-spacing: -.06em; text-transform: uppercase; }
+.step-heading h2 { margin: 0; font: 400 clamp(2.5rem, 5vw, 5.4rem)/.92 var(--display); font-synthesis: none; letter-spacing: -.04em; text-transform: uppercase; }
 .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
 .field { display: flex; flex-direction: column; gap: .65rem; }
 .field-full { grid-column: 1 / -1; }
